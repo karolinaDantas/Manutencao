@@ -69,7 +69,7 @@ public class SolicitacaoController {
     }
 
     @GetMapping("/delete/{id}")
-    public ModelAndView delete(@PathVariable Long id) {
+    public ModelAndView deleteConfirmation(@PathVariable Long id) {
         var solicitacao = buscarOuLancarNotFound(id);
         return new ModelAndView("delete", Map.of("solicitacao", solicitacao));
     }
